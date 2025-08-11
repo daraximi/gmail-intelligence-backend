@@ -55,7 +55,7 @@ app.use(authenticate);
 // Routes
 app.post('/analyse', async (req, res) => {
     // console.log(req.body);
-    //console.log('Analyse route hit');
+    console.log('Analyse route hit');
     const { emailText } = req.body;
 
     if (
@@ -111,7 +111,7 @@ app.post('/analyse', async (req, res) => {
 });
 
 app.post('/suggest', async (req, res) => {
-    //console.log('Suggest route hit');
+    console.log('Suggest route hit');
     const { emailText, analysisResult } = req.body;
 
     if (!emailText || !analysisResult) {
