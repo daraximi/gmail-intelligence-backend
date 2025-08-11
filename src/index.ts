@@ -50,7 +50,7 @@ function authenticate(
 }
 
 // Protect all routes
-app.use(authenticate);
+//app.use(authenticate);
 
 // Routes
 app.post('/analyse', async (req, res) => {
