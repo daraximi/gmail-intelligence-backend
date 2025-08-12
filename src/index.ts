@@ -14,7 +14,7 @@ app.use(helmet());
 app.use(
     cors({
         origin: '*',
-        methods: ['POST'],
+        methods: ['GET', 'POST'],
         allowedHeaders: ['Content-Type', 'x-api-key'],
     })
 );
@@ -50,7 +50,7 @@ function authenticate(
 }
 
 // Protect all routes
-//app.use(authenticate);
+app.use(authenticate);
 
 // Routes
 app.post('/analyse', async (req, res) => {
