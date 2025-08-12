@@ -53,6 +53,10 @@ function authenticate(
 app.use(authenticate);
 
 // Routes
+app.get('/health', (req, res) => {
+    res.json({ status: 'connected' }).status(200);
+});
+
 app.post('/analyse', async (req, res) => {
     // console.log(req.body);
     console.log('Analyse route hit');
